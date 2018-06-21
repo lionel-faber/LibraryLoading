@@ -47,7 +47,6 @@ public class Main {
       inputStream = Main.class.getResourceAsStream("libs/"+ System.mapLibraryName(libName));
       Files.copy(inputStream, file.toPath());
 
-      // System.loadLibrary("safe_app");
       System.loadLibrary("safe_app_jni");
 
       file = new File(generatedDir, System.mapLibraryName(authBaseLibName));
